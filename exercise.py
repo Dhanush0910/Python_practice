@@ -11,6 +11,8 @@ while(i>=0):    #0 is the last value since we start form end
 
 print(reverse_string)
 
+
+
 #reverse a string (for loop)
 
 n=str(input("Enter a String: "))
@@ -18,6 +20,19 @@ rev=""
     
                  #(start, stop, step)
 for index in range(len(n)-1, -1, -1):    #len(n)-1 is the last value, -1 is the value before to stop which means it stops at 0, -1 is decrementing 1 value
-    rev+=n[index]
+    rev += n[index]
 
 print(rev)
+
+
+
+#list comprehensions
+
+x = int(input("x:"))
+y = int(input("y:"))
+z = int(input("z:"))
+n = int(input("n:"))   #(constraint):sum of indeces i,j,k should not be equal to n
+result = [[i,j,k] for i in range(x+1) for j in range(y+1) #it is the shorter form of: result=[]  for in range(x+1)  for j..  for k..  if(x+y+z!=n):
+for k in range(z+1) if(i+j+k != n)]                                                                   #result.append([i,j,k])
+
+print(result)
